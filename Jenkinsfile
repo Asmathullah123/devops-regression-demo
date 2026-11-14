@@ -1,8 +1,7 @@
 pipeline {
     agent any
     tools {
-        jdk 'JDK-17'
-        maven 'Maven-3'
+        maven 'Maven-3.10.0'
     }
     stages {
         stage('Build and Run Regression Tests') {
