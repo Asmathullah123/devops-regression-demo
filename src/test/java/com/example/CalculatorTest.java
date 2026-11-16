@@ -1,19 +1,29 @@
 package com.example;
 
-public class Calculator {
-    public int add(int a, int b) {
-        return a + b;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class CalculatorTest {
+
+    Calculator calc = new Calculator();
+
+    @Test
+    public void testAdd() {
+        assertEquals(5, calc.add(2, 3));
     }
 
-    public int subtract(int a, int b) {
-        return a - b;
+    @Test
+    public void testSubtract() {
+        assertEquals(1, calc.subtract(3, 2));
     }
 
-    public int multiply(int a, int b) {
-        return a * b;
+    @Test
+    public void testMultiply() {
+        assertEquals(6, calc.multiply(2, 3));
     }
 
-    public int divide(int a, int b) {
-        return a / b;
+    @Test
+    public void testDivide() {
+        assertEquals(2, calc.divide(6, 3));
     }
 }
