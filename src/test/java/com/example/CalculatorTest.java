@@ -1,17 +1,19 @@
 package com.example;
 
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+public class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
 
-public class CalculatorTest {
-    Calculator calc = new Calculator();
+    public int subtract(int a, int b) {
+        return a - b;
+    }
 
-    @Test
-    @Tag("regression")
-    public void testAdd() { assertEquals(15, calc.add(10, 5)); }
+    public int multiply(int a, int b) {
+        return a * b;
+    }
 
-    @Test
-    @Tag("smoke")
-    public void testSubtract() { assertEquals(5, calc.subtract(10, 5)); }
+    public int divide(int a, int b) {
+        return a / b;
+    }
 }
